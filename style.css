@@ -69,10 +69,18 @@ a {
     font-weight: bold;
 }
 
+#tic-tac-toe:hover {
+    font-size: 50px;
+}
+
 #snake {
     font-size: 40px;
     font-family: 'Press Start 2P', cursive;
     color: green;
+}
+
+#snake:hover {
+    font-size: 50px;
 }
 
 #connect4 {
@@ -82,6 +90,10 @@ a {
     background-color: black;
     padding: 0 10px;
     border-radius: 30px;
+}
+
+#connect4:hover {
+    font-size: 50px;
 }
 
 #connect {
