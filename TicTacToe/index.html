@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tic-Tac-Toe</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <span>Tic-Tac-Toe</span>
+        </header>
+        <div class="players">
+            <span id="player1"></span>
+            <span id="player2"></span>
+        </div>
+        <div class="scores">
+            <span id="score1"></span>
+            <span id="score2"></span>
+        </div>
+        <div class="message-box">
+            <span id="message">Please enter your names</span>
+            <input type="text" class="names" id="player1name" />
+            <input
+                type="text"
+                class="names"
+                id="player2name"
+                placeholder="Computer"
+            />
+            <button class="names" id="submit-names">Submit</button>
+        </div>
+        <main>
+            <table>
+                <tr class="row1">
+                    <td class="column1"></td>
+                    <td class="column2"></td>
+                    <td class="column3"></td>
+                </tr>
+                <tr class="row2">
+                    <td class="column1"></td>
+                    <td class="column2"></td>
+                    <td class="column3"></td>
+                </tr>
+                <tr class="row3">
+                    <td class="column1"></td>
+                    <td class="column2"></td>
+                    <td class="column3"></td>
+                </tr>
+            </table>
+            <button id="reset">Play Again</button>
+        </main>
+    </body>
+    <script src="app.js"></script>
+</html>

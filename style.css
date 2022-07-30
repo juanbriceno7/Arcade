@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+body {
+    background-image: radial-gradient(rgb(255, 255, 255), rgb(0, 26, 255));
+    color: #1d2124;
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.3), 0px 6px 20px rgba(0,0,0,0.1);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    font-size: 100px;
+    font-weight: bold;
+    font-family: 'Russo One', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    padding: 0 10px;
+    margin-top: 10px;
+    animation-name: header;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes header {
+  0%   {color: red;}
+  10%  {color: orange;}
+  20%  {color: yellow;}
+  30%  {color: green;}
+  40% {color: blue;}
+  50% {color: purple;}
+  60% {color: blue;}
+  70%  {color: green;}
+  80%  {color: yellow;}
+  90%  {color: orange;}
+  100%   {color: red;}
+}
+
+.message-box {
+text-align: center;
+}
+
+#message {
+    font-size: 40px;
+    font-family: 'Russo One', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    margin-top: 20px;
+}
+
+.links {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+#tic-tac-toe {
+    font-family:'Permanent Marker', Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#snake {
+    font-size: 40px;
+    font-family: 'Press Start 2P', cursive;
+    color: green;
+}
+
+#connect4 {
+    font-size: 40px;
+    font-family:'Fredoka One', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    background-color: black;
+    padding: 0 10px;
+    border-radius: 30px;
+}
+
+#connect {
+    color: white;
+}
+
+#four {
+    color: red;
+}

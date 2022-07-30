@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+body {
+    background-image: radial-gradient(rgb(255, 255, 255), rgb(120, 120, 120));
+    color: #1d2124;
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.3), 0px 6px 20px rgba(0,0,0,0.1);
+    font-family:'Permanent Marker', Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    font-size: 50px;
+    font-weight: bold;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+
+.players {
+    margin-top: 20px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+.scores {
+    margin: 10px 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 25px;
+}
+
+.message-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+#message {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#player1name {
+    width: 120px;
+    height: 20px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+#player2name {
+    width: 120px;
+    height: 20px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+#submit-names {
+    margin-top: 15px;
+    background-color: rgb(90, 90, 255);
+    color: white;
+    border: 1px grey solid;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px grey;
+    transition: all 0.2s ease;
+}
+
+#submit-names:hover {
+    background-color: rgb(90, 90, 150);
+    cursor: pointer;
+}
+
+#submit-names:active {
+    outline: 5px rgba(50, 139, 255, 0.5) solid;
+    background-color: rgb(90, 90, 255);
+}
+
+.buttons {
+    min-width: 392px;
+}
+
+.submit {
+    margin-left: 18px;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.submit:hover {
+    cursor: pointer;
+}
+
+.submit:active {
+    outline: 5px rgba(50, 139, 255, 0.5) solid;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+table {
+    background-image: url(img/tictactoe.png);
+    border-collapse: separate;
+    border-spacing: 25px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    min-width: 300px;
+    min-height: 300px;
+}
+
+#reset {
+    margin-top: 20px;
+    background-color: rgb(90, 90, 255);
+    color: white;
+    border: 1px grey solid;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px grey;
+    transition: all 0.2s ease;
+}
+
+#reset:hover {
+    background-color: rgb(90, 90, 180);
+    cursor: pointer;
+}
+
+#reset:active {
+    outline: 5px rgba(50, 139, 255, 0.5) solid;
+    background-color: rgb(90, 90, 255);
+}
+
+td {
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+td:hover {
+    cursor: pointer;
+}
+
+.x {
+    background-image: url(img/cross.png);
+    background-position: -5px -3px; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.o {
+    background-image: url(img/circle.png);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.disable-clicks {
+    pointer-events: none;
+}

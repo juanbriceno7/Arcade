@@ -1,0 +1,152 @@
+body {
+    box-sizing: border-box;
+    background-image: radial-gradient(blue, black);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+header {
+    font-size: 40px;
+    margin: 10px 0;
+    color: green;
+}
+
+.score {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.score span {
+    font-size: 20px;
+    color: gold;
+}
+
+.popup1 {
+    background: rgb(25, 25, 180);
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 31vh;
+    left: 39.3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup1 span {
+    color: gold;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+#walls-up {
+    color: red;
+    background-color: rgb(25, 25, 180);
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#walls-down {
+    color: green;
+    background-color: rgb(25, 25, 180);
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+}
+
+#walls-up:hover {
+    cursor: pointer;
+    color: darkred;
+}
+
+#walls-up:active {
+    color: red;
+}
+
+#walls-down:hover {
+    cursor: pointer;
+    color: darkgreen;
+}
+
+#reset:active {
+    color: green;
+}
+
+.popup2 {
+    background: rgb(25, 25, 180);
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 31vh;
+    left: 39.3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#gameover {
+    font-size: 40px;
+    color: red;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#reset {
+    color: gold;
+    background-color: rgb(25, 25, 180);
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+}
+
+#reset:hover {
+    cursor: pointer;
+    color: goldenrod;
+}
+
+#reset:active {
+    color: gold;
+}
+
+.grid {
+    width: 500px;
+    height: 500px;
+    border-spacing: 0;
+}
+
+td {
+    box-sizing: border-box;
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+    min-height: 25px;
+}
+
+.light {
+    background-color: blue;
+}
+
+.dark {
+    background-color: navy;
+}
+
+.snake {
+    background: green;
+}
+
+img {
+    display: block;
+    max-width: 20px;
+    max-height: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}

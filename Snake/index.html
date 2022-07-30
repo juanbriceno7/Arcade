@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>Snake</title>
+    </head>
+    <body>
+        <header>
+            <span>Snake</span>
+        </header>
+        <main>
+            <div class="score">
+                <span>Current:</span>
+                <span id="current-score"></span>
+                <span>Best:</span>
+                <span id="highscore"></span>
+            </div>
+            <div class="popup1">
+                <span>Please select a game mode</span>
+                <button id="walls-up">Walls Up</button>
+                <button id="walls-down">Walls Down</button>
+            </div>
+            <div class="popup2">
+                <span id="gameover">GAME OVER</span>
+                <button id="reset">Play Again?</button>
+            </div>
+            <table class="grid"></table>
+        </main>
+    </body>
+    <script src="app.js"></script>
+</html>

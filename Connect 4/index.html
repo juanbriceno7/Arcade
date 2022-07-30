@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect Four</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <span id="connect">CONNECT</span>
+      <span id="four">4</span>
+    </header>
+    <div class="players">
+      <span id="player1"></span>
+      <span id="player2"></span>
+    </div>
+    <div class="scores">
+        <span id="score1"></span>
+        <span id="score2"></span>
+    </div>
+    <div class="message-box">
+        <span id="message">Please enter your names</span>
+        <input type="text" class="names" id="player1name">
+        <input type="text" class="names" id="player2name" placeholder="Computer">
+        <button class="names" id="submit-names">Submit</button>
+    </div>
+    <div class="buttons">
+        <button class="submit" id="column1button"></button>
+        <button class="submit" id="column2button"></button>
+        <button class="submit" id="column3button"></button>
+        <button class="submit" id="column4button"></button>
+        <button class="submit" id="column5button"></button>
+        <button class="submit" id="column6button"></button>
+        <button class="submit" id="column7button"></button>
+    </div>
+    <main>
+      <table>
+        <tr class="row1">
+          <td class="column1"></td>
+          <td class="column2"></td>
+          <td class="column3"></td>
+          <td class="column4"></td>
+          <td class="column5"></td>
+          <td class="column6"></td>
+          <td class="column7"></td>
+        </tr>
+        <tr class="row2">
+            <td class="column1"></td>
+            <td class="column2"></td>
+            <td class="column3"></td>
+            <td class="column4"></td>
+            <td class="column5"></td>
+            <td class="column6"></td>
+            <td class="column7"></td>
+          </tr>
+          <tr class="row3">
+            <td class="column1"></td>
+            <td class="column2"></td>
+            <td class="column3"></td>
+            <td class="column4"></td>
+            <td class="column5"></td>
+            <td class="column6"></td>
+            <td class="column7"></td>
+          </tr>
+          <tr class="row4">
+            <td class="column1"></td>
+            <td class="column2"></td>
+            <td class="column3"></td>
+            <td class="column4"></td>
+            <td class="column5"></td>
+            <td class="column6"></td>
+            <td class="column7"></td>
+          </tr>
+          <tr class="row5">
+            <td class="column1"></td>
+            <td class="column2"></td>
+            <td class="column3"></td>
+            <td class="column4"></td>
+            <td class="column5"></td>
+            <td class="column6"></td>
+            <td class="column7"></td>
+          </tr>
+          <tr class="row6">
+            <td class="column1"></td>
+            <td class="column2"></td>
+            <td class="column3"></td>
+            <td class="column4"></td>
+            <td class="column5"></td>
+            <td class="column6"></td>
+            <td class="column7"></td>
+          </tr>
+      </table>
+      <button id="reset">Play Again</button>
+    </main>
+  </body>
+  <script src="app.js"></script>
+</html>

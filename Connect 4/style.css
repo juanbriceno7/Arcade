@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+    background-image: radial-gradient(rgb(38, 162, 245), rgb(255, 255, 255));
+    color: #1d2124;
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.3), 0px 6px 20px rgba(0,0,0,0.1);
+    font-family:'Fredoka One', Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    font-size: 40px;
+    font-weight: bold;
+    background-color: black;
+    padding: 0 10px;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+#connect {
+    color: white;
+}
+
+#four {
+    color: red;
+}
+
+.players {
+    margin-top: 20px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+#player1 {
+    color: red;
+}
+
+#player2 {
+    color: yellow;
+}
+
+.scores {
+    margin: 10px 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 25px;
+}
+
+.message-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+#message {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#player1name {
+    width: 120px;
+    height: 20px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+#player2name {
+    width: 120px;
+    height: 20px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+#submit-names {
+    margin-top: 15px;
+    background-color: rgb(30, 30, 255);
+    color: white;
+    border: 1px grey solid;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px grey;
+    transition: all 0.2s ease;
+}
+
+#submit-names:hover {
+    background-color: rgb(30, 30, 150);
+    cursor: pointer;
+}
+
+#submit-names:active {
+    outline: 5px rgba(50, 139, 255, 0.5) solid;
+    background-color: rgb(30, 30, 255);
+}
+
+.buttons {
+    min-width: 392px;
+}
+
+.submit {
+    margin-left: 18px;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.submit:hover {
+    cursor: pointer;
+}
+
+.submit:active {
+    outline: 5px rgba(50, 139, 255, 0.5) solid;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+table {
+    border: 1px solid;
+    background-color: rgb(42, 49, 174);
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+#reset {
+    margin-top: 20px;
+    background-color: rgb(40, 200, 40);
+    color: white;
+    border: 1px lightgrey solid;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px grey;
+    transition: all 0.2s ease;
+}
+
+#reset:hover {
+    background-color: rgb(40, 100, 20);
+    cursor: pointer;
+}
+
+#reset:active {
+    outline: 5px rgba(50, 139, 255, 0.5) solid;
+    background-color: rgb(40, 200, 40);
+}
+
+td {
+    border: 1px solid;
+    height: 46px;
+    width: 46px;
+    max-width: 46px;
+    min-width: 46px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all 0.5s ease-out;
+}
+
+.player1turn {
+    background-color: red;
+}
+
+.player2turn {
+    background-color: yellow;
+}
