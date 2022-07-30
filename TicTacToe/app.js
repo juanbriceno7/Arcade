@@ -126,6 +126,7 @@ function addSymbolComputer(coordinates) {
     let xCoordinate = coordinates[1];
     rows[yCoordinate].getElementsByTagName('td')[xCoordinate].classList.toggle('o');
     board[yCoordinate][xCoordinate] = 'o';
+    table.classList.toggle("disable-clicks");
 
     updateBoard();
     winCheck();
@@ -177,7 +178,6 @@ function computerPause() {
 }
 
 function computerTurn() {
-    table.classList.toggle("disable-clicks");
     let coordinates;
     let tempMove = winningMove();
     if (tempMove !== -1) {
@@ -206,6 +206,7 @@ function computerTurn() {
 }
 
 function winningMove() {
+    console.log('winningmove');
     //check horizontally for winning move
     for (let i = 0; i < board.length; i++) {
         if (board[i][0] === 'o' && board[i][1] === 'o' && board[i][2] === 0) {
@@ -257,6 +258,7 @@ function winningMove() {
 }
 
 function stopOpponent() {
+    console.log('stopopponent');
     //check horizontally for winning move
     for (let i = 0; i < board.length; i++) {
         if (board[i][0] === 'x' && board[i][1] === 'x' && board[i][2] === 0) {
@@ -304,10 +306,24 @@ function stopOpponent() {
         return [1, 1];
     }
 
+    //stop opponent from making a cross
+    if (board[0][0] === 'x' && board[0][2] === 'x' && board[1][1] === 0) {
+        return [1, 1];
+    }
+    else if (board[0][2] === 'x' && board[2][2] === 'x' && board[1][1] === 0) {
+        return [1, 1];
+    }
+    else if (board[2][2] === 'x' && board[2][0] === 'x' && board[1][1] === 0) {
+        return [1, 1];
+    }
+    else if (board[2][0] === 'x' && board[0][0] === 'x' && board[1][1] === 0) {
+        return [1, 1];
+    }
     return -1;
 }
 
 function nextMove() {
+    console.log('nextmove');
     //setting up winning move
     if (board[0][0] === 'o' && board[2][2] === 'o') {
         if (board[0][2] === 0) {
@@ -406,6 +422,7 @@ function nextMove() {
 }
 
 function firstMove() {
+    console.log('firstmove');
     let first = true;
     //checks to see if it is the very first player
     for (let i = 0; i < board.length; i++) {
