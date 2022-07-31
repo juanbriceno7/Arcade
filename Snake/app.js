@@ -457,6 +457,8 @@ function playAgain() {
     grid.innerHTML = "";
     currentScore = 0;
     speed = 1;
+    mushroomTailCount = 0;
+    poisonCount = 0;
     createBoard();
     startGame();
 }
