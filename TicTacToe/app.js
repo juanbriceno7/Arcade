@@ -448,16 +448,16 @@ function firstMove() {
         }
     }
     else {
-        if (board[0][0] === 'x') {
+        if (board[0][0] === 'x' && board[0][1] === 0) {
             return [0, 1];
         }
-        else if (board[0][2] === 'x') {
+        else if (board[0][2] === 'x'&& board[0][2] === 0) {
             return [0, 1];
         }
-        else if (board[2][0] === 'x') {
+        else if (board[2][0] === 'x'&& board[2][1] === 0) {
             return [2, 1];
         }
-        else if (board[2][2] === 'x') {
+        else if (board[2][2] === 'x'&& board[2][1] === 0) {
             return [2, 1];
         }
         else if (board[1][1] === 0) {
