@@ -1,19 +1,14 @@
-let grid = document.querySelector('.grid');
-let score = document.querySelector('#current-score');
-let highscore = document.querySelector('#highscore');
-let popup1 = document.querySelector('.popup1');
-let popup2 = document.querySelector('.popup2');
-let wallsUp = document.querySelector('#walls-up');
-let wallsDown = document.querySelector('#walls-down');
-let reset = document.querySelector('#reset');
+const grid = document.querySelector('.grid');
+const score = document.querySelector('#current-score');
+const highscore = document.querySelector('#highscore');
+const popup1 = document.querySelector('.popup1');
+const popup2 = document.querySelector('.popup2');
+const wallsUp = document.querySelector('#walls-up');
+const wallsDown = document.querySelector('#walls-down');
+const reset = document.querySelector('#reset');
 let gamemode;
 let rows;
 let snake;
-let apple;
-let orange;
-let cherry;
-let mushroom;
-let poison;
 let mushroomTailCount = 0;
 let poisonCount = 0;
 let direction;
@@ -290,8 +285,6 @@ function arrayEquality(array1, array2) {
 }
 
 function randomApple() {
-    apple = document.createElement('img')
-    apple.src = "img/apple.png"
     let appleIndex = Math.floor(Math.random() * 400);
     let appleY = Math.floor(appleIndex / 20);
     let appleX = appleIndex % 20;
@@ -304,13 +297,11 @@ function randomApple() {
     }
     else {
         rows[appleY].getElementsByTagName('td')[appleX].classList.add('apple');
-        rows[appleY].getElementsByTagName('td')[appleX].appendChild(apple);
     }
 }
 
 function eatApple(tail) { //tail is an array of 2 values [y, x]
     if (rows[snake[0][0]].getElementsByTagName('td')[snake[0][1]].classList.contains('apple')) {
-        rows[snake[0][0]].getElementsByTagName('td')[snake[0][1]].removeChild(apple)
         rows[snake[0][0]].getElementsByTagName('td')[snake[0][1]].classList.remove('apple');
         rows[tail[0]].getElementsByTagName('td')[tail[1]].classList.add('snake');
         snake.push(tail);
@@ -341,8 +332,6 @@ function eatApple(tail) { //tail is an array of 2 values [y, x]
 }
 
 function randomOrange() {
-    orange = document.createElement('img')
-    orange.src = "img/orange.png"
     orangeIndex = Math.floor(Math.random() * 400);
     let orangeY = Math.floor(orangeIndex / 20);
     let orangeX = orangeIndex % 20;
@@ -355,13 +344,11 @@ function randomOrange() {
     }
     else {
         rows[orangeY].getElementsByTagName('td')[orangeX].classList.add('orange');
-        rows[orangeY].getElementsByTagName('td')[orangeX].appendChild(orange);
     }
 }
 
 function eatOrange() { 
     if (rows[snake[0][0]].getElementsByTagName('td')[snake[0][1]].classList.contains('orange')) {
-        rows[snake[0][0]].getElementsByTagName('td')[snake[0][1]].removeChild(orange)
         rows[snake[0][0]].getElementsByTagName('td')[snake[0][1]].classList.remove('orange');
         speed = speed * 0.75;
         currentScore++;
@@ -376,8 +363,6 @@ function eatOrange() {
 }
 
 function randomCherry() {
-    cherry = document.createElement('img')
-    cherry.src = "img/cherry.png"
     cherryIndex = Math.floor(Math.random() * 400);
     let cherryY = Math.floor(cherryIndex / 20);
     let cherryX = cherryIndex % 20;
@@ -390,13 +375,11 @@ function randomCherry() {
     }
     else {
         rows[cherryY].getElementsByTagName('td')[cherryX].classList.add('cherry');
-        rows[cherryY].getElementsByTagName('td')[cherryX].appendChild(cherry);
     }
 }
 
 function eatCherry() { 
     if (rows[snake[0][0]].getElementsByTagName('td')[snake[0][1]].classList.contains('cherry')) {
-        rows[snake[0][0]].getElementsByTagName('td')[snake[0][1]].removeChild(cherry)
         rows[snake[0][0]].getElementsByTagName('td')[snake[0][1]].classList.remove('cherry');
         speed = speed * 1.5;
         currentScore++;
@@ -411,8 +394,6 @@ function eatCherry() {
 }
 
 function randomMushroom() {
-    mushroom = document.createElement('img')
-    mushroom.src = "img/mushroom.png"
     mushroomIndex = Math.floor(Math.random() * 400);
     let mushroomY = Math.floor(mushroomIndex / 20);
     let mushroomX = mushroomIndex % 20;
@@ -425,13 +406,11 @@ function randomMushroom() {
     }
     else {
         rows[mushroomY].getElementsByTagName('td')[mushroomX].classList.add('mushroom');
-        rows[mushroomY].getElementsByTagName('td')[mushroomX].appendChild(mushroom);
     }
 }
 
 function eatMushroom(tail) {
     if (rows[snake[0][0]].getElementsByTagName('td')[snake[0][1]].classList.contains('mushroom')) {
-        rows[snake[0][0]].getElementsByTagName('td')[snake[0][1]].removeChild(mushroom)
         rows[snake[0][0]].getElementsByTagName('td')[snake[0][1]].classList.remove('mushroom');
         rows[tail[0]].getElementsByTagName('td')[tail[1]].classList.add('snake');
         snake.push(tail);
@@ -446,8 +425,6 @@ function eatMushroom(tail) {
 }
 
 function randomPoison() {
-    poison = document.createElement('img')
-    poison.src = "img/poison.png"
     poisonIndex = Math.floor(Math.random() * 400);
     let poisonY = Math.floor(poisonIndex / 20);
     let poisonX = poisonIndex % 20;
@@ -460,13 +437,11 @@ function randomPoison() {
     }
     else {
         rows[poisonY].getElementsByTagName('td')[poisonX].classList.add('poison');
-        rows[poisonY].getElementsByTagName('td')[poisonX].appendChild(poison);
     }
 }
 
 function eatPoison() {
     if (rows[snake[0][0]].getElementsByTagName('td')[snake[0][1]].classList.contains('poison')) {
-        rows[snake[0][0]].getElementsByTagName('td')[snake[0][1]].removeChild(poison)
         rows[snake[0][0]].getElementsByTagName('td')[snake[0][1]].classList.remove('poison');
         poisonCount = 5;
         currentScore++;
