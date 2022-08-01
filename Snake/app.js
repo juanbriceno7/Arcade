@@ -5,6 +5,7 @@ const popup1 = document.querySelector('.popup1');
 const popup2 = document.querySelector('.popup2');
 const wallsUp = document.querySelector('#walls-up');
 const wallsDown = document.querySelector('#walls-down');
+const difficulty = document.querySelector('select');
 const reset = document.querySelector('#reset');
 let gamemode;
 let rows;
@@ -22,18 +23,35 @@ let intervalTime;
 document.addEventListener('DOMContentLoaded', function() {
     popup2.style.display = 'none';
     createBoard();
-    // startGame();
 })
 
 wallsUp.addEventListener('click', function() {
     popup1.style.display = 'none'
     gamemode = 0;
+    if (difficulty.value === 'easy') {
+        intervalTime = 1000;
+    }
+    else if (difficulty.value === 'normal') {
+        intervalTime = 500;
+    }
+    else {
+        intervalTime = 250;
+    }
     startGame();
 });
 
 wallsDown.addEventListener('click', function() {
     popup1.style.display = 'none'
     gamemode = 1;
+    if (difficulty.value === 'easy') {
+        intervalTime = 1000;
+    }
+    else if (difficulty.value === 'normal') {
+        intervalTime = 500;
+    }
+    else {
+        intervalTime = 250;
+    }
     startGame();
 });
 
@@ -78,7 +96,7 @@ function startGame() {
     oldDirection = [0, 1];
     score.innerText = currentScore;
     highscore.innerText = bestScore;
-    intervalTime = 500;
+    // intervalTime = 500;
     snake = [[0, 2], [0, 1], [0, 0]];
     for (let i = 0; i < snake.length; i++) {
         rows[0].getElementsByTagName('td')[i].classList.add("snake");

@@ -76,6 +76,7 @@ a {
 #snake {
     font-size: 40px;
     font-family: 'Press Start 2P', cursive;
+    text-shadow: 5px 5px 2px black;
     color: green;
 }
 

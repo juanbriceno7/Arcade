@@ -6,6 +6,7 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: 'Press Start 2P', cursive;
+    text-shadow: 5px 5px 2px black;
 }
 
 header {
@@ -42,7 +43,16 @@ header {
     color: gold;
     text-align: center;
     font-size: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+#difficulty {
+    background: rgb(25, 25, 180);
+    font-family: 'Press Start 2P', cursive;
+    border: none;
+    color: white;
+    text-shadow: 3px 3px 1px black;
+    margin-bottom: 20px;
 }
 
 #walls-up {
@@ -51,7 +61,8 @@ header {
     border: none;
     font-family: 'Press Start 2P', cursive;
     font-size: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 1px black;
 }
 
 #walls-down {
@@ -60,6 +71,7 @@ header {
     border: none;
     font-family: 'Press Start 2P', cursive;
     font-size: 20px;
+    text-shadow: 3px 3px 1px black;
 }
 
 #walls-up:hover {
@@ -76,7 +88,7 @@ header {
     color: darkgreen;
 }
 
-#reset:active {
+#walls-down:active {
     color: green;
 }
 
@@ -108,6 +120,7 @@ header {
     border: none;
     font-family: 'Press Start 2P', cursive;
     font-size: 15px;
+    text-shadow: 3px 3px 1px black;
 }
 
 #reset:hover {

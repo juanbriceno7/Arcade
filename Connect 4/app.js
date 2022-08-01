@@ -1,18 +1,17 @@
+const message = document.getElementById('message');
+const player1name = document.getElementById('player1');
+const player2name = document.getElementById('player2');
+const nameSubmission = document.getElementById('submit-names');
+const buttons = document.getElementsByClassName('submit');
+const reset = document.getElementById('reset');
 let board = [[0,0,0,0,0,0,0],
             [0,0,0,0,0,0,0],
             [0,0,0,0,0,0,0],
             [0,0,0,0,0,0,0],
             [0,0,0,0,0,0,0],
             [0,0,0,0,0,0,0]]
-
 let player1score = 0;
 let player2score = 0;
-let message = document.getElementById('message');
-let player1name = document.getElementById('player1');
-let player2name = document.getElementById('player2');
-let nameSubmission = document.getElementById('submit-names');
-let buttons = document.getElementsByClassName('submit');
-let reset = document.getElementById('reset');
 let playerTurn;
 let computerIntervalId;
 let winState = 0;
@@ -51,8 +50,8 @@ for (let i = 0; i < buttons.length; i++) {
 reset.hidden = true;
 
 function initialize() {
-    let textfield1 = document.getElementById('player1name');
-    let textfield2 = document.getElementById('player2name');
+    const textfield1 = document.getElementById('player1name');
+    const textfield2 = document.getElementById('player2name');
     // a ? b : c
     //textfield1.value !== "" ? player1name.innerText = capitalize(textfield1.value) : "er beep b"
     if (textfield1.value !== "") {

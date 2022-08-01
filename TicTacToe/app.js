@@ -1,18 +1,17 @@
+const message = document.getElementById("message");
+const player1name = document.getElementById("player1");
+const player2name = document.getElementById("player2");
+const nameSubmission = document.getElementById("submit-names");
+const table = document.querySelector("table");
+const rows = document.querySelectorAll("tr");
+const reset = document.getElementById("reset");
 let board = [
     [0, 0, 0],
     [0, 0, 0],
     [0, 0, 0],
 ];
-
 let player1score = 0;
 let player2score = 0;
-let message = document.getElementById("message");
-let player1name = document.getElementById("player1");
-let player2name = document.getElementById("player2");
-let nameSubmission = document.getElementById("submit-names");
-let table = document.querySelector("table");
-let rows = document.querySelectorAll("tr");
-let reset = document.getElementById("reset");
 let playerTurn;
 let computerIntervalId;
 let winState = 0;
